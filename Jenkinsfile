@@ -22,8 +22,8 @@ pipeline {
         }
        stage('Move war to Tomcat') {
             steps {
-                sh 'rm -rf helloworld'
-                sh 'rm helloworld.war'
+                sh 'rm -rf /opt/tomcat/webapps/helloworld'
+                sh 'rm /opt/tomcat/webapps/helloworld.war'
                 sh 'cp /var/lib/jenkins/workspace/helloWorld/target/helloworld.war /opt/tomcat/webapps/'
                 sh 'systemctl restart tomcat'
             }
