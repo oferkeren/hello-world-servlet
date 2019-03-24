@@ -1,4 +1,4 @@
-hello Igentify
+hello Igentify,
 
 Home Assigment details:
 1. created google cloud account and one instance.
