@@ -22,10 +22,10 @@ pipeline {
         }
        stage('Move war to Tomcat') {
             steps {
-                sh 'sudo rm -rf /opt/tomcat/webapps/helloworld'
-                sh 'sudo rm /opt/tomcat/webapps/helloworld.war'
-                sh 'sudo cp /var/lib/jenkins/workspace/helloWorld/target/helloworld.war /opt/tomcat/webapps/'
-                sh 'sudo systemctl restart tomcat'
+                sh 'rm -rf /opt/tomcat/webapps/helloworld'
+                sh 'rm /opt/tomcat/webapps/helloworld.war'
+                sh 'cp /var/lib/jenkins/workspace/helloWorld/target/helloworld.war /opt/tomcat/webapps/'
+                sh 'systemctl restart tomcat'
             }
         } 
     }
