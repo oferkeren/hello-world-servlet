@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh 'sudo rm -rf /opt/tomcat/webapps/helloworld'
                 sh 'sudo rm /opt/tomcat/webapps/helloworld.war'
-                sh 'sudo cp /var/lib/jenkins/workspace/helloWorld/target/helloworld.war /opt/tomcat/webapps/'
+                sh 'sudo cp /var/lib/jenkins/workspace/igentifyTest/target/helloworld.war /opt/tomcat/webapps/'
                 sh 'sudo systemctl restart tomcat'
             }
         } 
